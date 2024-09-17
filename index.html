@@ -1,0 +1,56 @@
+<html lang="eng" style="overflow: hidden">
+<head>
+    <title>Stoopocat</title>
+</head>
+<body>
+<canvas id="c" style="position:absolute;left:0;top:0"></canvas>
+<script>
+    color = [];
+    for (let i = 0; i < 100; i++) {
+        color[i] = "rgb(" + i * 1.5 + "," + i * 2 + "," + i * 2 + ")";
+    }
+
+    w = screen.width;
+    h = screen.height;
+
+    c = document.getElementById("c");
+    c.width = w;
+    c.height = h;
+    d = c.getContext("2d");
+
+    mx = 0;
+    my = 0;
+    cx = 0;
+    cy = 0;
+
+    e=[]; //Сущности
+
+    p=[]; //Частицы
+
+    o=[]; //Объекты
+
+    b=[]; //Снаряды
+
+    l=[]; //Эффекты
+
+    F = [];
+    FX = 10;
+    FY = 10;
+    for (let ix = 0; ix < FX; ix++) {
+        for (let iy = 0; iy < FY; iy++) {
+            F[ix][iy] = {t: 0};
+        }
+    }
+
+    g();
+
+    function g() {
+        d.fillStyle = color[35];
+        d.fillRect(0, 0, w, h);
+
+
+        setTimeout(g, 16);
+    }
+</script>
+</body>
+</htmL>

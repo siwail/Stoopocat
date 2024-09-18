@@ -9,6 +9,9 @@
     for (let i = 0; i < 100; i++) {
         color[i] = "rgb(" + i * 1.5 + "," + i * 2 + "," + i * 2 + ")";
     }
+	
+	pics = [];
+	
 
     w = screen.width;
     h = screen.height;
@@ -37,6 +40,7 @@
     FX = 10;
     FY = 10;
     for (let ix = 0; ix < FX; ix++) {
+		F[ix] = [];
         for (let iy = 0; iy < FY; iy++) {
             F[ix][iy] = {t: 0};
         }
@@ -47,10 +51,16 @@
     function g() {
         d.fillStyle = color[35];
         d.fillRect(0, 0, w, h);
-
+		
 
         setTimeout(g, 16);
     }
+	
+	
+	function draw(){
+		
+	
+	}
 </script>
 </body>
 </htmL>
